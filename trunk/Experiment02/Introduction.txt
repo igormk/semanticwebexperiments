@@ -1,0 +1,20 @@
+This experiment is testing the performances of the program
+which is trying to make conclusions using the rules, in our case
+the transitive rule. This experiment is similar to the previous one.
+The previous experiment was testing the limits, but this experiment
+is trying to make conclusions about working with ontologies
+which are tree-like. The program generates a tree of resources, every resource
+has two children resources excluding the leaves. This is a balanced structure.
+The program can generate tree with any depth determined by the parameter MAX_DEPTH.
+The testing showed that for this environment (described in the file Environment.txt)
+the upper limit of MAX_DEPTH is 16, that means the tree has 131071 nodes.
+There is no problem in generating the tree. This upper value of N is expected.
+The only limit is the Java heap space.
+The experiment consists of 10 trials in order to get more accurate results.
+Every experiment is made of creating the ontology - the tree and making conclusions
+about the realtions of every possible pair. If the tree has total of N nodes, then
+there are N*N pairs which are tested. The conclusions that A is subclass of B, only if
+B is on the path from A to the root of the tree were made correctly. This value
+is stored in the variable totalrelations. We are calculating the time to get
+the conclusion about the relation for every possible pair.
+After that we sort the data in ascending order.
