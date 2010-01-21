@@ -1,0 +1,12 @@
+This experiment is testing the performances of the system which is
+trying to make conclusion about the relations between two resources.
+Resources are connected with the property SubClassOf. We are testing the
+transitive property of the ontology.
+We have N resources in order, each resource is subclass of another resource,
+so it is like resources are connected in a list
+A subclass of B subclass of C sublass of D sublass of ... sublass of Z
+We are testing the time needed the system to conclude that A is subclass of Z.
+The number N of elements in the list is varying, and time is calculated in two most
+important phases, first one - creating the ontology and second one - derivating the
+conclusing about the inheritance.
+The first phase is system dependent so the results about this time can be ignored.

@@ -1,0 +1,14 @@
+The first thing that was tested was the upper limit - the number of
+resources that can be put in series for which the program can give
+the appropriate conclusion. Suprisingly, the upper limit of N is realively low.
+For values above 2,000 the program fails. THe ontology is built but the
+program fails on heapspace needed for generating the conclusion about
+the inheritance. A chart included in this folder chart_01.jpg shows
+the data taken from one instance of this experiment. Other text files
+are included in this folder too which are used to make the final conclusion.
+The apscise of the chart shows the variable (N/10). The ordinate shows the
+elapsed time in miliseconds (the value t4-t3 in the program). We can see that
+for values of N smaller than 2,000 the line is nearly a straight line
+and time = c * N where c is a constant. Near values of N the time rapidly
+increases. This is mainly by the big ammount of memory which is used by the
+program. For values above 2,000 the program fails.
