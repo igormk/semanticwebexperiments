@@ -1,0 +1,30 @@
+This experiment has similar testing objective like the
+previous one. It is interesting that never occured
+exception java.lang.OutOfMemoryError: Java heap space. This is an
+important fact. In the previous experiment we had only 2,000 nodes
+in the ontology and we have reached the limits and this time we can
+have up to 150,000 nodes in the ontology without any problem in
+execution of the program.
+Also the performance of the operation (transitive relation) is
+outstanding in the second experiment. The program was tested with
+MAX_DEPTH = 10 although it would be better to have bigger values of MAX_DEPTH.
+It wasn't tested with bigger values because it would take a long time
+for the calculations and bigger conclusions couldn't be made
+even if we tested with values near the limits of 16.
+This is because the depth is not very big. The testing produced
+big files of data which consisted of zeros mainly - all the operations
+and derivations were made in nearly 0 miliseconds.
+Before the experiment it was expected that the times in the data would be
+grouped in some specific non-continuous values, because of the
+balanced symetric ontology model. It was not the case here because we didn't have
+nodes which had transitive relation derived over long array of consecutive
+resources connected with the subClassOf property. This experiment is more
+like the cases in the real life, we rarely have transitive inheritance of more than 10
+objects. So this experiment showed that conclusions are made very fast
+and very efficiently for data which comes from the real world.
+The first experiment (Experiment01) was testing the special case, but
+this experiment was testing a more real life like ontology structure.
+Output data files were not included in this folder because they were very big
+in size, and second thing, the values for the calculation time were all zeros
+so big conclusion couldn't be concluded from the data apart from the fact
+that all operations were excecuted very efficiently.
