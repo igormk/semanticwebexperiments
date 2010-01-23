@@ -1,0 +1,29 @@
+This experiment test the performances of real-world data - 
+different owl ontologies. Conclusions can't be made only from working with
+one file, that is why it is needed a more flexible approach,
+working with more files and making conclusions individually, after that,
+making a summary. The program is build so that can analize more files
+which are placed in the same folder. Here we use only one ontology, but for more accurate
+results, the experiment should be expanded with using more ontologies,
+hopefully with different structure than the others.
+OWL ontologies were found on the internet, mostly
+from http://protege.cim3.net/cgi-bin/wiki.pl?ProtegeOntologiesLibrary
+One of the files that were used here is amino-acid.owl which can be downloaded
+from the web page mentioned above.
+The objectives at start were, analyzing the time for loading the model,
+time for building and inference model, getting the number of resources,
+subjects, objects, statements and most importantly getting the average time
+for executing a single query.
+Soon, it was concluded that these all objectives can not be fullfilled even
+when we use relatively small ontology which is 100 KB in size.
+The problem which appeared was how to find the average query time.
+First, the statements were derived (a limited number of statements, because
+the program gives Exception if we try to find all the statements), then,
+they were put in array, and it was checked again if they can be concluded from
+the model. Third, it was calculated the average time. Even this experiment have
+some "bugs". One of the problems is all the statements were not included,
+then, the statements are not propably in "random order", and we are not choosing
+random population from this data in order to get more accurate results.
+These problems couldn't be overcomed so the experiment continued
+with ignoring these problems. Second problem was that we couldn't use
+inf.listObjects() and inf.listSubjects(), at least not in reasonable time.

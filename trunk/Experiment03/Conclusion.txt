@@ -1,0 +1,64 @@
+The first file that was tested was amino-acid.owl which is
+described in the Introduction file. The program was executed a couple
+of times and with two different values for the number of statements, 1000
+and 3,000. This was because of two reasons. Firstly, executing statements
+with index over 3,800 was impossible, the program throw exceptions. This was
+I guess from two reasons, the data was not ok, or the reasoning system did not
+function correctly. However the experiment continued. Seond thing, we want to get
+as accurate data as possible, and if the values for two upper limits vere similar
+then we can get more accurate conclusion. The data obtained is:
+
+1000 (without printing to System.out)
+
+START OF READING amino-acid.owl
+The file was read in 872 miliseconds
+The inference model was created in 217 miliseconds
+Average time for finding a statement is 0,020 miliseconds
+Average time for executing a query is 0,128 miliseconds
+
+START OF READING amino-acid.owl
+The file was read in 858 miliseconds
+The inference model was created in 206 miliseconds
+Average time for finding a statement is 0,019 miliseconds
+Average time for executing a query is 0,138 miliseconds
+
+START OF READING amino-acid.owl
+The file was read in 876 miliseconds
+The inference model was created in 227 miliseconds
+Average time for finding a statement is 0,026 miliseconds
+Average time for executing a query is 0,131 miliseconds
+
+
+3000 (without printing to System.out)
+
+START OF READING amino-acid.owl
+The file was read in 942 miliseconds
+The inference model was created in 215 miliseconds
+Average time for finding a statement is 0,038 miliseconds
+Average time for executing a query is 0,290 miliseconds
+
+START OF READING amino-acid.owl
+The file was read in 880 miliseconds
+The inference model was created in 206 miliseconds
+Average time for finding a statement is 0,038 miliseconds
+Average time for executing a query is 0,295 miliseconds
+
+START OF READING amino-acid.owl
+The file was read in 892 miliseconds
+The inference model was created in 207 miliseconds
+Average time for finding a statement is 0,039 miliseconds
+Average time for executing a query is 0,286 miliseconds
+
+We can see that the model was loaded in reasonable time, around 1 second, also
+the inference model was build relatively fast. The time for finding a statement is
+different from the time for executing a query because the system has it's own
+algorithm how to find the next statement and on the path of doing that
+uses already made calculations from before, so the average time for finding a statement is
+a couple of times smaller than the average time for executing a query built on statement.
+We can notice that the average time for executing a query is not the same for the two different
+upper limits. Unfortunatelly this fact doesn't help us in making final conclusion.
+The difference in times can be easily explained. The system uses its own algorithm for finding
+statements so at start it finds the statements which are easier to find, then the more
+complex ones, so the order is important here. From the tested maximum number of statements
+(1,000 and 3,000) we can conclude that the average time for executing a query varies from
+0.1 to 0.3 miliseconds. However this are not so realiable results.
