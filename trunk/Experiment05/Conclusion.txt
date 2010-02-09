@@ -1,0 +1,27 @@
+The results were as expected. There can be around 200,000 resources loaded
+into memory. A bit suprising result was that length of path name has a big
+influence in the size of the resouce as a whole. Two types of string name
+were used, a string name with 35 letters and a string name with 70 letters.
+The results are as shown:
+
+219774 Classes with NS having 35 letters
+158850 Classes with NS having 70 letters
+
+225198 Properties with NS having 35 letters
+173227 Properties with NS having 70 letters
+
+225206 Individuals with NS having 35 letters
+173235 Individuals with NS having 70 letters
+
+We can see that most amount of memory is used by Class. We can also see how
+big is the difference of extreme value of total number of classes in the two
+cases. Increasing of 100% of the string length size results in increasing
+the total memory size taken by the class in about 35%. By using simple math, we
+can get an approximate view of how big is the amount of memory used by the resource.
+
+Hypotesis: the memory size of the string is the length of the string * 1 Byte
+219774 * (memorynostring + 35 Bytes) = 158850 * (memorynostring + 70 Bytes)
+60924 * memorynostring = 11119500 Bytes - 7692090 Bytes = 3427410 Bytes
+memorynostring = 57 Bytes
+
+These are only experimental results.

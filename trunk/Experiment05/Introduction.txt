@@ -1,0 +1,6 @@
+We try to find the upper number of classes that can be placed in the same
+ontology in the same time which can be successfully loaded into memory.
+Also we try to find the upper number of other elements, Properties and
+Individuals. Also we are testing how big influence has the class path
+in the total number of resources, how much the extreme value will be changed
+with shorter and with longer path name.
