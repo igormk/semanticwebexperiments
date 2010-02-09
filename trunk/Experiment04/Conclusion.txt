@@ -1,0 +1,17 @@
+The results from the experiment was suprising. It was needed a long time
+to gather the conclusion for values of N bigger than 20. The limits were
+at N = 33, this means around 1000 classes and 30 individuals in this ontology.
+For bigger ontologies occurs exception java.lang.OutOfMemoryError: Java heap space.
+There is not a problem in creating the ontology and inference problem, the problem
+appears when trying to make the conclusion about the individuals contained in some
+specific class. The internal system has it's own method for making conclusions
+which spends a lot of memory. The dependance, time as a function of the value N
+is given in results.jpg (keep in mind that the apscise shows N/2, not N). At start it
+was expected that the graph would be linear and dependent of the height of the ontology,
+and we see that that is not the case here. These results can be explained keeping in
+mind that we have N^2 resources in the ontology and the time does not depend from the
+height only but also from the total number of resources. In the first experiment
+the time was lineary dependent from the height, but in that case, the "width" of the
+model was only 1.
+However, a suprising result, problems appear with this model, although the number
+of classes was relativelly small and also the height was relativelly small.
