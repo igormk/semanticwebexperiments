@@ -1,0 +1,4 @@
+Processor: Genuine Intel(R) CPU T2130 @ 1.86GHz, 1867 Mhz, 2 Core(s), 2 Logical Processor(s)
+RAM: 2,00 GB
+The program was excecuted on Eclipse platform.
+The heapspace was the default one.
