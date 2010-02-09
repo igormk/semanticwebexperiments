@@ -1,0 +1,11 @@
+This experiment tests the performaces of the reasoner. An ontology model was created
+which tried to test the limits of the reasoner. The ontology consists of classes
+which are connected to each other with the subClassOf property. There are N rows, each
+row has N classes. We can think of the layout of the model as a matrix. Every class,
+except the classes in the highest level have two superclasses above them. The classes
+in the lowest layer additionally have one individual each. This interconnected network
+of classes can be seen on the picture graph.jpg.
+The query which was tested is "How many individuals have the classes in the most upper
+layer" keeping in mind that the inheritance property is applied, that means class A which have
+subclasses contains not only the individuals that are instances of this class A, but
+individuals from the classes which are subclasses of this class A.
